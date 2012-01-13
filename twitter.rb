@@ -7,7 +7,7 @@ def hpricot(account = "sr_valeriano")
 end
 
 def tweets(doc)
-  items = doc / ".stream .stream-items .stream-item"
+  items = doc / ".stream-item"
   items.each do |item|
     tweet = item / ".tweet .js-tweet-text"
     puts tweet.inner_text
